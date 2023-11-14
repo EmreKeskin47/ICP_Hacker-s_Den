@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "dao_backend": {
+      "candid": "src/dao_backend/dao_backend.did",
+      "package": "dao_backend",
+      "type": "rust"
+    },
+    "dao_frontend": {
+      "dependencies": [
+        "dao_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dao_frontend/src/index.html"
+      },
+      "source": [
+        "src/dao_frontend/assets",
+        "dist/dao_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

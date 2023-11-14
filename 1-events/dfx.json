@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "events_backend": {
+      "candid": "src/events_backend/events_backend.did",
+      "package": "events_backend",
+      "type": "rust"
+    },
+    "events_frontend": {
+      "dependencies": [
+        "events_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/events_frontend/src/index.html"
+      },
+      "source": [
+        "src/events_frontend/assets",
+        "dist/events_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

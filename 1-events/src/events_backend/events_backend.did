@@ -1,0 +1,36 @@
+type Participant = record {
+    address: text;
+};
+
+type Event = record {
+    name: text;
+    date: text;
+    participants: vec Participant;
+};
+
+type Result = 
+    variant {
+        Ok;
+        Err: EventError;
+    };
+
+
+type EventError = 
+    variant {
+        NoSuchEvent;
+        JoinError;
+        CancelJoinError;
+        GetEventsError;
+        AlreadyJoined;
+        AlreadyExists;
+    };
+
+service : {
+    "get_events_from_api": () -> (text);
+    "create_event": (text,text) -> (Result);
+    "join_event": (nat64, text) -> (Result);
+    "cancel_join_event": (nat64, text) -> (Result);
+    "get_stored_events": () -> (vec Event) query;
+    "get_participants_of_event": (nat64) -> (opt vec text) query;
+    "get_event_by_id": (nat64) -> (opt Event) query;
+}
