@@ -1,14 +1,14 @@
-# ICP_Hacker-s_Den Content
+# ICP Cross Chain Hacker's Den Content
 
 This repo contains the educational content for ICP Cross Chains Hacker's Den.
 
 ## Content
 
--   **Rust.pptx**: Basics of Rust
--   **1-events**: First ICP canister example using Rust, demonstrating how to manage state and make http calls from the canister
--   **2-dao**: Second ICP canister example using Rust, demonstrating how to manage state and utilize timer for repetitive tasks, along with implementation of a basic DAO
+-   **Rust.pptx**: An introductory presentation on the Rust programming language, covering its basic concepts and syntax.
+-   **1-events**: This is the first example of an ICP canister implemented in Rust. It demonstrates essential techniques for managing state and making HTTP calls from within a canister.
+-   **2-dao**: implementation of a Decentralized Autonomous Organization (DAO) illustrating state management and the use of timers for executing repetitive tasks.
 -   **3-nft-container**: Last ICP canister example using Rust, demonstrating how to create and interact with NFTs in ICP
--   **Blockchain Use Cases**: Use cases of blockchain in real life that can be inspiring when deciding on what to implement
+-   **Blockchain Use Cases**: list of real-world blockchain applications that can be inspiring when deciding on what to implement
 
 ## ICP Glossary
 
