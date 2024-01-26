@@ -1,0 +1,14 @@
+
+type Exam = record {
+    out_of: nat8;
+    course: text;
+    curve: nat8;
+};
+
+
+service : {
+    "get_exam": (nat64) -> (opt Exam) query;
+    "get_participation": (nat64) -> (opt nat64) query;
+    "insert_exam": (nat64, Exam) -> (opt Exam);
+    "insert_participation": (nat64, nat64) -> (opt nat64);
+}
